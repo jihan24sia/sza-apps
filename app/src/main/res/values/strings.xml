@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SZ Apps</string>
+    <string name="kirim">Kirim</string>
+    <string name="kirim_pesan">Kirim Pesan</string>
+    <string name="footer">Powered by Zafa App</string>
+
 </resources>
