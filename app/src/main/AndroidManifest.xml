@@ -14,10 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SZApps">
         <activity
-            android:name=".pertemuan_5.WebViewActivity"
+            android:name=".AuthActivity"
             android:exported="false" />
         <activity
             android:name=".pertemuan_5.FifthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan_5.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +33,7 @@
         </activity> <!-- HALAMAN AWAL -->
         <activity
             android:name=".MainActivity"
-            android:exported="false"/> <!-- ACTIVITY LAIN -->
+            android:exported="false" /> <!-- ACTIVITY LAIN -->
         <activity
             android:name=".pertemuan_4.FourthActivity"
             android:exported="false" />
