@@ -1,4 +1,4 @@
-package com.example.szapps.pertemuan_5
+package com.example.szapps.Home.pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,12 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.NestedScrollView
 import com.example.szapps.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class FifthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +21,7 @@ class FifthActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_fifth)
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         //improvisasi toolbar
@@ -46,8 +49,8 @@ class FifthActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val nestedScroll = findViewById<androidx.core.widget.NestedScrollView>(R.id.nestedScroll)
-        val btnTop = findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.btnTop)
+        val nestedScroll = findViewById<NestedScrollView>(R.id.nestedScroll)
+        val btnTop = findViewById<FloatingActionButton>(R.id.btnTop)
 
 // IMPROVISASI Scrollable Content
         nestedScroll.setOnScrollChangeListener { _, _, scrollY, _, _ ->

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/pink_aneh"
-    tools:context=".pertemuan_3.ThirdResultActivity">
+    tools:context=".Home.pertemuan_3.ThirdResultActivity">
 
     <!-- ICON -->
     <ImageView

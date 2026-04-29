@@ -1,4 +1,4 @@
-package com.example.szapps.pertemuan_2
+package com.example.szapps.Home.pertemuan_2
 
 fun main() {
     println("Hai rekan-rekan...")

@@ -1,37 +1,41 @@
-package com.example.szapps
+package com.example.szapps.Home
 
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.szapps.databinding.ActivityMainBinding
+import com.example.szapps.AuthActivity
 import com.example.szapps.Home.pertemuan_2.SecondActivity
 import com.example.szapps.Home.pertemuan_3.ThirdActivity
 import com.example.szapps.Home.pertemuan_4.FourthActivity
 import com.example.szapps.Home.pertemuan_5.FifthActivity
 import com.example.szapps.Home.pertemuan_7.SevenActivity
+import com.example.szapps.R
+import com.example.szapps.databinding.FragmentHomeBinding
 
-class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+class HomeFragment : Fragment() {
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
         binding.btnToSecond.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
+            val intent = Intent(requireContext(), SecondActivity::class.java)
             /*tambahkan bagian berikut*/
 
             intent.putExtra("name", "Politeknik Caltex Riau")
@@ -43,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnToThird.setOnClickListener {
-            val intent = Intent(this, ThirdActivity::class.java)
+            val intent = Intent(requireContext(), ThirdActivity::class.java)
             /*tambahkan bagian berikut*/
 
             intent.putExtra("name", "Politeknik Caltex Riau")
@@ -55,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnToFourth.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
+            val intent = Intent(requireContext(), FourthActivity::class.java)
             /*tambahkan bagian berikut*/
 
             intent.putExtra("name", "Politeknik Caltex Riau")
@@ -67,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnToFifth.setOnClickListener {
-            val intent = Intent(this, FifthActivity::class.java)
+            val intent = Intent(requireContext(), FifthActivity::class.java)
             /*tambahkan bagian berikut*/
 
             intent.putExtra("name", "Politeknik Caltex Riau")
@@ -79,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnToSeven.setOnClickListener {
-            val intent = Intent(this, SevenActivity::class.java)
+            val intent = Intent(requireContext(), SevenActivity::class.java)
             /*tambahkan bagian berikut*/
 
             intent.putExtra("name", "Politeknik Caltex Riau")
@@ -94,7 +98,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnLogout.setOnClickListener {
 
-            AlertDialog.Builder(this)
+            AlertDialog.Builder(requireContext())
                 .setTitle("Logout")
                 .setMessage("Apakah ingin logout?")
                 .setPositiveButton("Ya") { dialog, _ ->
@@ -105,14 +109,15 @@ class MainActivity : AppCompatActivity() {
 
                     dialog.dismiss()
 
-                    val intent = Intent(this, AuthActivity::class.java)
+                    val intent = Intent(requireContext(), AuthActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 
                     startActivity(intent)
-                    finish()
+                    requireActivity().finish()
                 }
                 .setNegativeButton("Tidak", null)
                 .show()
         }
     }
+
 }

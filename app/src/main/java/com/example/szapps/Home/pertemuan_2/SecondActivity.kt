@@ -1,4 +1,5 @@
-package com.example.szapps.pertemuan_3
+package com.example.szapps.Home.pertemuan_2
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,43 +11,46 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.szapps.MainActivity
 import com.example.szapps.R
-import com.example.szapps.databinding.ActivityThirdBinding
+import com.example.szapps.databinding.ActivitySecondBinding
 
-class ThirdActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityThirdBinding
+class SecondActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySecondBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-//setContentView(R.layout.activity_third)
-
-        binding = ActivityThirdBinding.inflate(layoutInflater)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        binding.btnBack.setOnClickListener {
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         // Inisialisasi komponen
-//        val inputNoTujuan: EditText = findViewById(R.id.inputNoTujuan)
-//
-//        val btnKirim: Button = findViewById(R.id.btnKirim)
+        val inputNama: EditText = findViewById(R.id.inputNama)
+        val btnSubmit: Button = findViewById(R.id.btnSubmit)
 
-        binding.btnKirim.setOnClickListener {
+        btnSubmit.setOnClickListener {
             //Mengambil value dari inputNama dan menampilkan di Logcat
-            val no = binding.inputNoTujuan.text
+            val nama = inputNama.text
+            Log.e("Klik btnSubmit","Tombol berhasil di tekan. Isi dari inputNama = $nama")
 
-            Toast.makeText(this, "Pesan berhasil dikirim ke $no", Toast.LENGTH_SHORT).show()
-
-            val intent = Intent(this, ThirdResultActivity::class.java)
-            startActivity(intent)
-        }
+            Toast.makeText(this, "Anda telah melakukan klik pada tombol Submit", Toast.LENGTH_SHORT).show()
         }
     }
+}

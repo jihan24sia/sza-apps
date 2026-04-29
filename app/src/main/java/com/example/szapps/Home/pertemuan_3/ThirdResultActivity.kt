@@ -1,4 +1,4 @@
-package com.example.szapps.pertemuan_3
+package com.example.szapps.Home.pertemuan_3
 
 import android.os.Bundle
 import android.widget.Button

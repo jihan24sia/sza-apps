@@ -1,4 +1,4 @@
-package com.example.szapps.pertemuan_4
+package com.example.szapps.Home.pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle

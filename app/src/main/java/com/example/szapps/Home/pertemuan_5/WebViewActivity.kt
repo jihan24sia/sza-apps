@@ -1,5 +1,6 @@
-package com.example.szapps.pertemuan_5
+package com.example.szapps.Home.pertemuan_5
 
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebSettings
@@ -37,7 +38,7 @@ class WebViewActivity : AppCompatActivity() {
                 return true
             }
             // IMPROVISASI: loading start
-            override fun onPageStarted(view: WebView?, url: String?, favicon: android.graphics.Bitmap?) {
+            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 supportActionBar?.title = "Loading..."
             }
 
