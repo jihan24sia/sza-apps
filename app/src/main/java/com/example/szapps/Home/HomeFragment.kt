@@ -14,6 +14,7 @@ import com.example.szapps.Home.pertemuan_3.ThirdActivity
 import com.example.szapps.Home.pertemuan_4.FourthActivity
 import com.example.szapps.Home.pertemuan_5.FifthActivity
 import com.example.szapps.Home.pertemuan_7.SevenActivity
+import com.example.szapps.Home.pertemuan_9.NinthActivity
 import com.example.szapps.R
 import com.example.szapps.databinding.FragmentHomeBinding
 
@@ -84,6 +85,18 @@ class HomeFragment : Fragment() {
         }
         binding.btnToSeven.setOnClickListener {
             val intent = Intent(requireContext(), SevenActivity::class.java)
+            /*tambahkan bagian berikut*/
+
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
+
+            startActivity(intent)
+
+
+        }
+        binding.btnToNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
             /*tambahkan bagian berikut*/
 
             intent.putExtra("name", "Politeknik Caltex Riau")

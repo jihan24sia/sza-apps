@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SZApps">
         <activity
+            android:name=".Home.pertemuan_9.NinthActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="false" />
         <activity
