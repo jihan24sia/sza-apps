@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import com.example.szapps.AuthActivity
+import com.example.szapps.Home.pertemuan_10.TenthActivity
 import com.example.szapps.Home.pertemuan_2.SecondActivity
 import com.example.szapps.Home.pertemuan_3.ThirdActivity
 import com.example.szapps.Home.pertemuan_4.FourthActivity
@@ -97,6 +98,18 @@ class HomeFragment : Fragment() {
         }
         binding.btnToNinth.setOnClickListener {
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            /*tambahkan bagian berikut*/
+
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
+
+            startActivity(intent)
+
+
+        }
+        binding.btnToTen.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             /*tambahkan bagian berikut*/
 
             intent.putExtra("name", "Politeknik Caltex Riau")
