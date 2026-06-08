@@ -1,4 +1,4 @@
-package com.example.szapps.More
+package com.example.szapps.Message.More
 
 import android.R
 import android.os.Bundle

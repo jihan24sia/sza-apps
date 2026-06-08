@@ -7,8 +7,6 @@
     android:background="@color/coklatt"
     tools:context=".Home.HomeFragment">
 
-
-
     <View
         android:id="@+id/background_header"
         android:layout_width="0dp"
