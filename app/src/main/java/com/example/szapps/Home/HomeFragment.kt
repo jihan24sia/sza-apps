@@ -161,8 +161,12 @@ class HomeFragment : Fragment() {
                 binding.rvGallery.adapter = adapter
 
                 /** List Tampil Vertical*/
-                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
-
+                binding.rvGallery.layoutManager =
+                    LinearLayoutManager(
+                        requireContext(),
+                        LinearLayoutManager.HORIZONTAL,
+                        false
+                    )
                 /** List Tampil Horizontal */
                 //binding.rvGallery.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 

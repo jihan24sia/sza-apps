@@ -24,6 +24,9 @@ class TutorialMessageActivity : AppCompatActivity() {
         // 2. Aktifkan tombol back resmi
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.toolbarTutorial.navigationIcon?.setTint(
+            getColor(android.R.color.white)
+        )
 
         // 3. Aksi tombol back klik
         binding.toolbarTutorial.setNavigationOnClickListener {
