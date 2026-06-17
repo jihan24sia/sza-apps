@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.szapps.AuthActivity
 import com.example.szapps.Data.api.PhotoApiClient
 import com.example.szapps.Home.pertemuan_10.TenthActivity
+import com.example.szapps.Home.pertemuan_13.ThirteenthActivity
 import com.example.szapps.Home.pertemuan_2.SecondActivity
 import com.example.szapps.Home.pertemuan_3.ThirdActivity
 import com.example.szapps.Home.pertemuan_4.FourthActivity
@@ -126,6 +127,19 @@ class HomeFragment : Fragment() {
 
 
         }
+        binding.btnPertemuan13.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
+            /*tambahkan bagian berikut*/
+
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
+
+            startActivity(intent)
+
+
+        }
+
 
 
         binding.btnLogout.setOnClickListener {

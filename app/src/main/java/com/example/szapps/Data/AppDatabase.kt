@@ -8,13 +8,13 @@ import com.example.szapps.Data.dao.NoteDao
 import com.example.szapps.Data.entity.NoteEntity
 
 @Database(
-    entities = [NoteEntity::class], // tambahkan entitas baru di sini
+    entities = [NoteEntity::class],
     version = 1
 )
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun noteDao(): NoteDao
-    /*Tambahkan Dao baru disini */
+
 
     companion object {
         @Volatile private var INSTANCE: AppDatabase? = null

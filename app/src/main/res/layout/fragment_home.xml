@@ -213,6 +213,25 @@
                         android:textSize="14sp"
                         android:textStyle="bold"/>
                 </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnPertemuan13"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    app:layout_columnWeight="1"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeWidth="0dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|start"
+                        android:paddingHorizontal="16dp"
+                        android:text="Pertemuan 13"
+                        android:textColor="@color/cocoa"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </com.google.android.material.card.MaterialCardView>
 
             </androidx.gridlayout.widget.GridLayout>
 
