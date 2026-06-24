@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.szapps.Home.HomeFragment
 import com.example.szapps.MainActivity
 import com.example.szapps.R
 import com.example.szapps.databinding.ActivityFourthBinding
@@ -43,7 +44,7 @@ class FourthActivity : AppCompatActivity() {
 
         binding.btnBack.setOnClickListener {
 
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeFragment::class.java)
             startActivity(intent)
             finish()
         }

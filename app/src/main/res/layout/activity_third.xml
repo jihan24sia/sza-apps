@@ -3,87 +3,100 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/pink_aneh"
+    android:background="@color/champagnelime"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".Home.pertemuan_3.ThirdActivity">
 
-    <!-- TAMBAHAN: Judul kecil -->
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="@string/kirim_pesan"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/cocoa"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.2"/>
-
-    <!-- TAMBAHAN: Icon (opsional, pakai drawable bawaan) -->
-
-    <!-- YANG SUDAH ADA (TIDAK DIUBAH) -->
-
-    <ImageView
-        android:id="@+id/iconMessage"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@android:drawable/ic_dialog_email"
-        app:layout_constraintBottom_toTopOf="@+id/footer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTitle"
-        app:layout_constraintVertical_bias="0.655" />
-
-    <Button
-        android:id="@+id/btnKirim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
-        android:backgroundTint="@color/coklatt"
-        android:text="@string/kirim"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/inputNoTujuan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text=""
-        android:background="#FFD2D8"
-        android:hint="Masukkan nomor tujuan"
-        android:padding="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnKirim"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
-
-    <!-- TAMBAHAN: Footer -->
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/josefinsans_variablefont_wght"
         android:text="Selamat Malam"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/cocoa"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconMessage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/inputNoTujuan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="#FFD2D8"
+        android:hint="Masukkan nomor tujuan"
+        android:inputType="phone"
+        android:padding="14dp"
+        android:textColorHint="#88FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/iconMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnKirim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/coklatt"
+        android:padding="12dp"
+        android:text="@string/kirim"
+        app:layout_constraintTop_toBottomOf="@id/inputNoTujuan"
+        app:layout_constraintEnd_toEndOf="@id/inputNoTujuan"
+        app:layout_constraintStart_toStartOf="@id/inputNoTujuan" />
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/phone"
+        app:layout_constraintTop_toBottomOf="@id/btnKirim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/black"
+        android:padding="12dp"
+        android:text="Kembali"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/footer"
@@ -94,31 +107,6 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:layout_width="174dp"
-        android:layout_height="99dp"
-        android:src="@drawable/phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtTitle"
-        app:layout_constraintVertical_bias="0.808" />
-
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Kembali"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#F48FB1"
-        android:padding="12dp"
-        app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="40dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
